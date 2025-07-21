@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: supabase-render
+    plan: free
+    dockerComposePath: docker/docker-compose.yml
+    env: free
+    envVars:
+      - key: POSTGRES_PASSWORD
+        value: P@ssw0rd!2024_Supabase  
+      - key: JWT_SECRET
+        value: P@ssw0rd!2024_Supabase
+      - key: SITE_URL
+        value: https://supabase-render.onrender.com
+      - key: ANON_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4dHl6Y2N0eXl1ZmFqZ3RmcXliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQzNjAzNjksImV4cCI6MjAwOTkzNjM2OX0.2l7hXhQYH5-9Q7Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q
