@@ -1,23 +1,18 @@
 services:
   - type: web
     name: supabase-render
-    plan: free                # Plan gratuito (o "starter" para DB persistente)
-    dockerComposePath: docker/docker-compose.yml  # Ruta al compose
+    plan: free
+    dockerComposePath: docker/docker-compose.yml
     env: free
-    
-    # Variables de entorno CRÍTICAS para Supabase
     envVars:
       - key: POSTGRES_PASSWORD
-        value: P@ssw0rd_S3gur0_2024  # ¡Cambia esto! Usa una contraseña compleja.
+        value: P@ssw0rd_S3gur0_2024
       - key: JWT_SECRET
-        value: abcDEF123$$%xyz789     # Mínimo 32 caracteres, ¡cambia esto!
+        value: abcDEF123$$%xyz789
       - key: SITE_URL
-        value: https://supabase-render.onrender.com  # Ajusta al nombre de tu servicio
+        value: https://supabase-render.onrender.com
       - key: ANON_KEY
-        generateValue: true           # Render generará uno automáticamente
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4dHl6Y2N0eXl1ZmFqZ3RmcXliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQzNjAzNjksImV4cCI6MjAwOTkzNjM2OX0.2l7hXhQYH5-9Q7Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q
       - key: SERVICE_ROLE_KEY
-        generateValue: true           # Render generará uno automáticamente
-
-    # Configuración avanzada (opcional pero recomendada)
-    healthCheckPath: /rest/v1/        # Endpoint para health checks
-    autoDeploy: true                  # Despliegue automático en cambios
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4dHl6Y2N0eXl1ZmFqZ3RmcXliIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDM2MDM2OSwiZXhwIjoyMDA5OTM2MzY5fQ.2l7hXhQYH5-9Q7Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q
+    healthCheckPath: /rest/v1/
